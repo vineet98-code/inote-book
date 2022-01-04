@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 var cors = require('cors');
+require('dotenv').config();
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -38,6 +39,10 @@ app.use('/api/notes', notesRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+if(process.env.NODE_ENV === 'production'){
+  app.use(express.static("frontend/build"));
+}
 
 // error handler
 app.use(function(err, req, res, next) {

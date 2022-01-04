@@ -55,3 +55,6 @@ function App() {
 }
 
 export default App;
+
+// "server": "nodemon backened/bin/www"
+//  // "both": "concurrently \"npm run start\" \"npm run server\"" - to run both at the same time
