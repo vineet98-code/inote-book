@@ -18,6 +18,10 @@ mongoose.connect('mongodb://localhost/inotebook',
   (err) => console.log(err ? err : "Connected true")
 );
 
+// const password = process.env.AmRLc6Ftd99ihOm2
+// const DB= 'mongodb+srv://vineet98:AmRLc6Ftd99ihOm2@cluster0.f2bw8.mongodb.net/inotebook?retryWrites=true&w=majority'
+// mongoose.connect(DB,{ useNewUrlParser: true, useUnifiedTopology: true }, (err) => console.log(err ? err : "Connected true"));
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -56,3 +60,15 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+// crreating basic server
+// var http = require('http');
+
+// http.createServer((req, res) => {
+//   res.writeHead(200, { 'Content-Type': 'text/html' });
+//   res.write('<h1>Hello World</h1>');
+//   res.end();
+// })
+// .listen(3000, () => console.log('Server started at port 3000'));
+
+

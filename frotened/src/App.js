@@ -43,7 +43,7 @@ function App() {
               <Route exact path="/login">
                 <Login showAlert={showAlert}/>
               </Route>
-              <Route exact path="/signup">
+              <Route exact path="/register">
                 <Signup showAlert={showAlert}/>
               </Route>
             </Switch>

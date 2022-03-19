@@ -1,4 +1,5 @@
 var express = require('express');
+var uniqueValidator = require('mongoose-unique-validator');
 var mongoose = require('mongoose');
 var jwt = require('jsonwebtoken');
 var bcrypt = require('bcrypt');
@@ -12,6 +13,7 @@ var userSchema = new mongoose.Schema({
 
 }, { timestamps: true });
 
+userSchema.plugin(uniqueValidator, {message: 'is already taken.'});
 
 // pre save hook
 userSchema.pre('save', async function (next) {

@@ -46,7 +46,7 @@ return (
 
                     {!localStorage.getItem('token')?<form className="d-flex">
                         <Link className="btn btn-primary mx-2" to="/login" role="button">Login</Link>
-                        <Link className="btn btn-primary" to="/signup" role="button">SignUp</Link>
+                        <Link className="btn btn-primary" to="/register" role="button">SignUp</Link>
                     </form>: <button onClick={handleLogout} className="btn btn-primary">Logout</button>}
 
                     <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light'} mx-4`}>

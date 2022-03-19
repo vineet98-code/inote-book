@@ -8,7 +8,7 @@ const Signup = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         // Api call
-            const response = await fetch(`http://localhost:4000/api/users/login`, {
+            const response = await fetch(`http://localhost:4000/api/users/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
